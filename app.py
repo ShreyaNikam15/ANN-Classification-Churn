@@ -7,7 +7,7 @@ import pickle
 import os
 import tensorflow as tf
 
-model_path = r'C:\Users\Shrey\OneDrive\Desktop\python\annclassification\annclassification\model.h5'
+model_path = model.h5
 
 # Check if file exists
 if os.path.exists(model_path):
@@ -18,15 +18,14 @@ else:
 
 
 # Load the encoders and scaler
-with open(r'C:\Users\Shrey\OneDrive\Desktop\python\annclassification\annclassification\label_encoder_gender.pkl', 'rb') as file:
+with open('label_encoder_gender.pkl', 'rb') as file:
     label_encoder_gender = pickle.load(file)
 
-with open(r'C:\Users\Shrey\OneDrive\Desktop\python\annclassification\annclassification\onehot_encoder_geo.pkl', 'rb') as file:
+with open('onehot_encoder_geo.pkl', 'rb') as file:
     onehot_encoder_geo = pickle.load(file)
 
-with open(r'C:\Users\Shrey\OneDrive\Desktop\python\annclassification\annclassification\scaler.pkl', 'rb') as file:
+with open('scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
-
 
 ## streamlit app
 st.title('Customer Churn PRediction')

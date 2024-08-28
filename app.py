@@ -7,7 +7,7 @@ import pickle
 import os
 import tensorflow as tf
 
-model_path = model.h5
+model_path = 'model.h5'
 
 # Check if file exists
 if os.path.exists(model_path):
